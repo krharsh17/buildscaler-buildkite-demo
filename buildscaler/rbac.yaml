@@ -6,8 +6,8 @@ metadata:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: ##NAMESPACE##:system:auth-delegator
-  namespace: ##NAMESPACE##
+  name: buildkite:system:auth-delegator
+  namespace: buildkite
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -15,7 +15,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: buildscaler-apiserver
-  namespace: ##NAMESPACE##
+  namespace: buildkite
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -28,7 +28,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: buildscaler-apiserver
-  namespace: ##NAMESPACE##
+  namespace: buildkite
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole

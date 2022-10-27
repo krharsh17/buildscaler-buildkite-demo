@@ -1,0 +1,6 @@
+name: "Buildscaler Test"
+steps:
+  - command: "sleep 10"
+parallelism: 100
+agents:
+  queue: test

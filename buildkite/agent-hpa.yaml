@@ -1,8 +1,7 @@
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: buildkite-agent
-  namespace: external-metrics
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
